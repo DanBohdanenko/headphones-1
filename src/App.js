@@ -1,19 +1,20 @@
 import React from "react";
-import "./css/main.css";
-import Footer from "./components/Footer";
-import Main from "./components/Main";
-import Home from "./components/Home";
+import "./main.scss";
+import Footer from "./components/footer/Footer";
+import Home from "./components/home/Home";
+import About from "./components/about/About";
+import Results from "./components/results/Results";
+import Contact from "./components/contact/Contact";
 
 function App() {
-  //Burger menu function
-  const [burgerActive, setBurgerActive] = React.useState(false);
-  const onSetBurgerActive = () => {
-    setBurgerActive((prev) => !prev);
-  };
   return (
     <div>
-      <Home burgerActive={burgerActive} onSetBurgerActive={onSetBurgerActive} />
-      <Main />
+      <Home />
+      <main>
+        <About />
+        <Results />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );

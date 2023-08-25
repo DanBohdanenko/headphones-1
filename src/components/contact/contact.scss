@@ -1,0 +1,129 @@
+.contact {
+  min-height: 600px;
+  width: 100%;
+  padding: 60px 0;
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  &__form {
+    min-width: 320px;
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__form input,
+  &__form textarea {
+    display: block;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 28px;
+  }
+  &__form label {
+    opacity: 0.75;
+    display: inline-block;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    transition: 0.3s;
+  }
+  &__form input:focus + label,
+  &__form textarea:focus + label,
+  label.active {
+    transform: scale(0.9) translate(-5%, -170%);
+  }
+  &__form fieldset {
+    position: relative;
+  }
+  &__message {
+    padding: 5px 0;
+  }
+  &__button {
+    margin: 60px auto 0 auto;
+  }
+  &__input-error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}
+
+.success {
+  min-height: 600px;
+  width: 100%;
+  padding: 100px 0;
+  &__body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+  }
+  &__container {
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: border linear 0.7s infinite 1s;
+  }
+  &__title {
+    font-size: 30px;
+    color: rgb(26, 130, 44);
+    font-weight: 700;
+    transform: translateY(50%);
+    opacity: 0;
+    animation: title 0.9s forwards;
+  }
+  &__text {
+    font-size: 22px;
+    color: rgb(26, 130, 44);
+    transform: translateY(50%);
+    opacity: 0;
+    animation: title 0.9s forwards 1s;
+  }
+  &__container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130px;
+    height: 130px;
+    background-color: #fff;
+    animation: success-icon 1.2s forwards;
+  }
+  &__icon {
+    font-size: 80px;
+    color: rgb(36, 187, 61);
+  }
+}
+
+@keyframes success-icon {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 131px;
+  }
+}
+@keyframes border {
+  0% {
+    outline: 0px solid rgba(255, 65, 65, 0);
+  }
+  50% {
+    outline: 5px solid rgba(36, 187, 61, 0.533);
+  }
+  100% {
+    outline: 9px solid rgba(255, 65, 65, 0);
+  }
+}
