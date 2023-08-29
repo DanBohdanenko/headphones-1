@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./contact.scss";
 import Success from "./Success";
-import TitleComponent from "../typography/TitleComponent";
-import { titles } from "../typography/typographyData";
-import NameInput from "./NameInput";
-import EmailInput from "./EmailInput";
-import TextArea from "./TextArea";
+import NameInput from "./inputs/NameInput";
+import EmailInput from "./inputs/EmailInput";
+import TextArea from "./inputs/TextArea";
+import Typography from "../../common/Typography";
+import contactInfo from "./data/contactInfo";
 
 const Contact = () => {
   //Name Input state
@@ -129,10 +129,9 @@ const Contact = () => {
   return (
     <section className="contact" id="contact">
       <div className="container">
-        <TitleComponent
-          className="contact__title title"
-          title={titles.contact}
-        />
+        <Typography variant="h2" className="contact__title title">
+          {contactInfo.title}
+        </Typography>
         <form className="contact__form" onSubmit={handleSubmit}>
           <NameInput
             emptyNameChecking={emptyNameChecking}

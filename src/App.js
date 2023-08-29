@@ -1,15 +1,15 @@
 import React from "react";
 import "./main.scss";
-import Footer from "./components/footer/Footer";
-import Home from "./components/home/Home";
-import About from "./components/about/About";
-import Results from "./components/results/Results";
-import Contact from "./components/contact/Contact";
+import Footer from "./components/Footer/Footer";
+import Hero from "./components/Hero/Hero";
+import About from "./components/About/About";
+import Results from "./components/Results/Results";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
     <div>
-      <Home />
+      <Hero />
       <main>
         <About />
         <Results />

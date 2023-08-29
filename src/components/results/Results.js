@@ -1,27 +1,29 @@
 import React from "react";
 import "./results.scss";
-import resultsItemsDataList from "./ResultsItemsData";
-import TitleComponent from "../typography/TitleComponent";
-import TextComponent from "../typography/TextComponent";
-import { titles, text } from "../typography/typographyData";
+import resultsInfo from "./data/resultsInfo";
+import Typography from "../../common/Typography";
 
-//"Results" component
 const Results = () => {
   return (
     <section className="results" id="results">
       <div className="container">
         <div className="results__body">
-          <TitleComponent
-            className="results__title title"
-            title={titles.results}
-          />
-          <TextComponent className="results__text text" text={text.results} />
+          <Typography variant="h2" className="results__title title">
+            {resultsInfo.title}
+          </Typography>
+          <Typography variant="p" className="results__text text">
+            {resultsInfo.text}
+          </Typography>
         </div>
         <ul className="results__list">
-          {resultsItemsDataList.map((item) => (
+          {resultsInfo.items.map((item) => (
             <li key={item.id} className="results__item">
-              <h5 className="results__item-title">{item.title}</h5>
-              <p className="results__item-text">{item.text}</p>
+              <Typography variant="h5" className="results__item-title">
+                {item.title}
+              </Typography>
+              <Typography variant="p" className="results__item-text">
+                {item.text}
+              </Typography>
             </li>
           ))}
         </ul>

@@ -1,28 +1,33 @@
 import React from "react";
-import images from "./images";
+import aboutImages from "./data/aboutImages";
 import "./about.scss";
-import aboutItemsDataList from "./AboutItemsData";
-import TitleComponent from "../typography/TitleComponent";
-import TextComponent from "../typography/TextComponent";
-import { titles, text } from "../typography/typographyData";
+import aboutInfo from "./data/aboutInfo";
+import Typography from "../../common/Typography";
 
-//"About component"
 const About = () => {
   return (
     <section className="about" id="about">
       <div className="container">
         <div className="about__body">
-          <TitleComponent className="about__title title" title={titles.about} />
-          <TextComponent className="about__text text" text={text.about} />
+          <Typography variant="h2" className="about__title title">
+            {aboutInfo.title}
+          </Typography>
+          <Typography variant="p" className="about__text text">
+            {aboutInfo.text}
+          </Typography>
         </div>
         <ul className="about__items">
-          {aboutItemsDataList.map((item) => (
+          {aboutInfo.items.map((item) => (
             <li key={item.id} className="about__item">
               <div className="about__item-img">
-                <img src={images[item.src]} alt="about-image" />
+                <img src={aboutImages[item.src]} alt="about-image" />
               </div>
-              <h3 className="about__item-title">{item.title}</h3>
-              <p className="about__item-text">{item.description}</p>
+              <Typography variant="h3" className="about__item-title">
+                {item.title}
+              </Typography>
+              <Typography variant="p" className="about__item-text">
+                {item.description}
+              </Typography>
             </li>
           ))}
         </ul>

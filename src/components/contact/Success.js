@@ -1,5 +1,6 @@
 import React from "react";
 import { AiOutlineCheck } from "react-icons/ai";
+import "./success.scss";
 
 const Success = () => {
   return (
