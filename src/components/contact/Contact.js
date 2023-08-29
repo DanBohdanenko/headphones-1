@@ -125,49 +125,45 @@ const Contact = () => {
     }
   };
   //====================================
-  if (isSubmitted) {
-    return <Success />;
-  } else {
-    return (
-      <section className="contact" id="contact">
-        <div className="container">
-          <TitleComponent
-            className="contact__title title"
-            title={titles.contact}
+  if (isSubmitted) return <Success />;
+  return (
+    <section className="contact" id="contact">
+      <div className="container">
+        <TitleComponent
+          className="contact__title title"
+          title={titles.contact}
+        />
+        <form className="contact__form" onSubmit={handleSubmit}>
+          <NameInput
+            emptyNameChecking={emptyNameChecking}
+            onChangeName={onChangeName}
+            nameInput={nameInput}
           />
-          <form className="contact__form" onSubmit={handleSubmit}>
-            <NameInput
-              emptyNameChecking={emptyNameChecking}
-              onChangeName={onChangeName}
-              nameInput={nameInput}
-            />
-            <EmailInput
-              onChangeEmail={onChangeEmail}
-              emailInput={emailInput}
-              emailCorrect={emailCorrect}
-            />
-            <TextArea
-              onChangeMessage={onChangeMessage}
-              messageInput={messageInput}
-              emptyMessageChecking={emptyMessageChecking}
-            />
-            <button
-              type="submit"
-              className="contact__button button"
-              id="form-submit"
-              onClick={(event) => {
-                emptyNameChecking();
-                emailCorrect(event);
-                emptyMessageChecking();
-              }}
-            >
-              Send
-            </button>
-          </form>
-        </div>
-      </section>
-    );
-  }
+          <EmailInput
+            onChangeEmail={onChangeEmail}
+            emailInput={emailInput}
+            emailCorrect={emailCorrect}
+          />
+          <TextArea
+            onChangeMessage={onChangeMessage}
+            messageInput={messageInput}
+            emptyMessageChecking={emptyMessageChecking}
+          />
+          <button
+            type="submit"
+            className="contact__button button"
+            id="form-submit"
+            onClick={(event) => {
+              emptyNameChecking();
+              emailCorrect(event);
+              emptyMessageChecking();
+            }}
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </section>
+  );
 };
-
 export default Contact;

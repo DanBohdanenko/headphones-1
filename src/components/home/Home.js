@@ -1,10 +1,8 @@
 import React from "react";
-import Header from "../header/Header";
+import { Header } from "../header";
 import "./home.scss";
 import { titles, subtitles, text } from "../typography/typographyData";
 import TextComponent from "../typography/TextComponent";
-
-//Home component - first component user will see
 
 const Home = () => {
   return (

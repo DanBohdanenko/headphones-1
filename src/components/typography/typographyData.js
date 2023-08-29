@@ -1,13 +1,13 @@
-let titles = {
+const titles = {
   home: "Premium Headphones for True Music Lovers",
   about: "About us",
   results: "Our results speak for themselves",
   contact: "Contact us",
 };
-let subtitles = {
+const subtitles = {
   home: "Immerse Yourself in the Ultimate Audio Experience",
 };
-let text = {
+const text = {
   home: `Discover a wide range of premium headphones designed to deliver
         exceptional sound quality and comfort. Whether you're a music
         enthusiast or a professional audiophile, our headphones offer

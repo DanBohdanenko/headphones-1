@@ -1,7 +1,7 @@
 import React from "react";
 import mainLogo from "../../assets/img/desktop/icons/logo.svg";
 
-const Header = () => {
+export const Header = () => {
   //Burger menu activity state
   const [burgerActive, setBurgerActive] = React.useState(false);
   //function that monitors and changes the state of the burger
@@ -59,5 +59,3 @@ const Header = () => {
     </header>
   );
 };
-
-export default Header;
