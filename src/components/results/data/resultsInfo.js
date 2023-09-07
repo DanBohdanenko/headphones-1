@@ -1,4 +1,4 @@
-const resultsInfo = {
+export const resultsInfo = {
   title: "Our results speak for themselves",
   text: `With a proven track record of
     success, we have consistently delivered outstanding outcomes for our
@@ -31,4 +31,3 @@ const resultsInfo = {
     },
   ],
 };
-export default resultsInfo;

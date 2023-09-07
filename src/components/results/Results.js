@@ -1,35 +1,30 @@
 import React from "react";
 import "./results.scss";
-import resultsInfo from "./data/resultsInfo";
-import Typography from "../../common/Typography";
+import { Typography, Section, resultsInfo } from "../";
 
-const Results = () => {
+export const Results = () => {
   return (
-    <section className="results" id="results">
-      <div className="container">
-        <div className="results__body">
-          <Typography variant="h2" className="results__title title">
-            {resultsInfo.title}
-          </Typography>
-          <Typography variant="p" className="results__text text">
-            {resultsInfo.text}
-          </Typography>
-        </div>
-        <ul className="results__list">
-          {resultsInfo.items.map((item) => (
-            <li key={item.id} className="results__item">
-              <Typography variant="h5" className="results__item-title">
-                {item.title}
-              </Typography>
-              <Typography variant="p" className="results__item-text">
-                {item.text}
-              </Typography>
-            </li>
-          ))}
-        </ul>
+    <Section className="results" id="results" variant="section">
+      <div className="results__body">
+        <Typography variant="h2" className="results__title title">
+          {resultsInfo.title}
+        </Typography>
+        <Typography variant="p" className="results__text text">
+          {resultsInfo.text}
+        </Typography>
       </div>
-    </section>
+      <ul className="results__list">
+        {resultsInfo.items.map((item) => (
+          <li key={item.id} className="results__item">
+            <Typography variant="h5" className="results__item-title">
+              {item.title}
+            </Typography>
+            <Typography variant="p" className="results__item-text">
+              {item.text}
+            </Typography>
+          </li>
+        ))}
+      </ul>
+    </Section>
   );
 };
-
-export default Results;

@@ -46,8 +46,7 @@ img {
 /*--------------------*/
 
 html,
-body,
-.MuiTypography-h2 {
+body {
   font-family: "Montserrat", sans-serif;
 }
 html {
@@ -57,9 +56,6 @@ html {
   width: calc(100% - 250px);
   margin: 0 auto;
   padding: 28px 0;
-}
-header {
-  width: 100%;
 }
 .title {
   font-size: 32px;
@@ -73,9 +69,6 @@ header {
   line-height: 23px;
   letter-spacing: 2px;
 }
-.burger {
-  display: none;
-}
 .button {
   display: inline-block;
   width: 162px;
@@ -88,6 +81,7 @@ header {
   border-radius: 22px;
   box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
   transition: ease 0.5s;
+  letter-spacing: 2px;
   &:hover {
     transform: translateY(3px);
   }
@@ -102,45 +96,6 @@ header {
 @media (max-width: 768px) {
   .container {
     width: calc(100% - 50px);
-  }
-  .burger {
-    z-index: 5;
-    display: block;
-    position: relative;
-    width: 30px;
-    height: 18px;
-    cursor: pointer;
-    margin-top: 5px;
-  }
-  .burger span {
-    position: absolute;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    transition: 0.4s;
-    background-color: #fff;
-  }
-  .burger span:first-child {
-    top: 0;
-  }
-  .burger span:nth-child(2) {
-    top: 50%;
-    transform: scale(1) translateY(-50%);
-  }
-  .burger span:last-child {
-    bottom: 0;
-  }
-
-  .burger.active span:nth-child(2) {
-    transform: scale(0) translateX(-50%);
-  }
-  .burger.active span:first-child {
-    top: 50%;
-    transform: rotate(-45deg) translate(0px, -50%);
-  }
-  .burger.active span:last-child {
-    bottom: 50%;
-    transform: rotate(45deg) translate(0px, 50%);
   }
 }
 @media (max-width: 530px) {

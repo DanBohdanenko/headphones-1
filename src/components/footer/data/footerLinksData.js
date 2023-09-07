@@ -1,6 +1,6 @@
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
-const footerLinksData = [
+export const footerLinksData = [
   { platform: "facebook", url: "https://www.facebook.com/", img: FaFacebook },
   { platform: "twitter", url: "https://twitter.com/", img: FaTwitter },
   {
@@ -9,4 +9,3 @@ const footerLinksData = [
     img: FaInstagram,
   },
 ];
-export default footerLinksData;

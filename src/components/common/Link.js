@@ -1,6 +1,6 @@
 import React from "react";
 
-const Link = ({ href, target, rel, children, className, onClick }) => {
+export const Link = ({ href, target, rel, children, className, onClick }) => {
   return (
     <a
       href={href}
@@ -13,5 +13,3 @@ const Link = ({ href, target, rel, children, className, onClick }) => {
     </a>
   );
 };
-
-export default Link;

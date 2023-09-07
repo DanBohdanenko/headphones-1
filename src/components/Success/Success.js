@@ -2,7 +2,7 @@ import React from "react";
 import { AiOutlineCheck } from "react-icons/ai";
 import "./success.scss";
 
-const Success = () => {
+export const Success = () => {
   return (
     <section className="success">
       <div className="container">
@@ -17,5 +17,3 @@ const Success = () => {
     </section>
   );
 };
-
-export default Success;

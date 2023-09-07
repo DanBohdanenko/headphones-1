@@ -1,4 +1,4 @@
-const headerLinksData = [
+export const headerLinksData = [
   {
     children: "About us",
     href: "#about",
@@ -12,4 +12,3 @@ const headerLinksData = [
     href: "#contact",
   },
 ];
-export default headerLinksData;

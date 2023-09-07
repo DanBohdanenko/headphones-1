@@ -1,4 +1,4 @@
-const aboutInfo = {
+export const aboutInfo = {
   title: "About us",
   text: `We are dedicated to providing the ultimate audio experience for true
     music lovers. Our handpicked collection of high-quality headphones
@@ -37,4 +37,3 @@ const aboutInfo = {
     },
   ],
 };
-export default aboutInfo;

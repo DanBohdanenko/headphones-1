@@ -1,28 +1,14 @@
 import React from "react";
 import mainLogo from "../../assets/img/desktop/icons/logo.svg";
-import Link from "../../common/Link";
-import headerLinksData from "./data/headerLinksData";
+import { Link, headerLinksData, Burger } from "../";
 import "./header.scss";
 
 export const Header = () => {
   const [burgerActive, setBurgerActive] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(true);
-
-  const toggleBurger = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const onSetBurgerActive = () => {
-    setBurgerActive((prev) => !prev);
-  };
-  const burgerClickHandler = () => {
-    onSetBurgerActive();
-    toggleBurger();
-  };
-
   const closeBurger = () => {
     setIsOpen(false);
-    onSetBurgerActive(false);
+    setBurgerActive(false);
   };
   return (
     <header className="header">
@@ -30,14 +16,12 @@ export const Header = () => {
         <Link href="#hero">
           <img src={mainLogo} alt="logo" />
         </Link>
-        <div
-          className={burgerActive ? "burger active" : "burger"}
-          onClick={() => burgerClickHandler()}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <Burger
+          burgerActive={burgerActive}
+          setBurgerActive={setBurgerActive}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+        />
         <ul
           className={
             burgerActive ? "header__nav-list active" : "header__nav-list"
