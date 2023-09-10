@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./contact.scss";
 import { Typography, Section, Form, contactInfo } from "../";
 
